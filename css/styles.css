@@ -1,0 +1,57 @@
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;;
+}
+td {
+    vertical-align: top;
+}
+p {
+    font-size: small;
+}
+p.bold-text {
+    font-weight: 600;
+}
+
+h5.brown-text {
+    color: #B69259;
+    font-size: medium;
+}
+
+p.italicised {
+    font-style: italic;
+    font-size: smaller;
+}
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 80%;
+    }
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+  }
