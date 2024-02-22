@@ -12,6 +12,7 @@ td {
     vertical-align: top;
 	width: 100%;
 	font-weight: 600;
+	padding: 6px;
 }
 th {
 	font-size: smaller;
