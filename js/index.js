@@ -1,25 +1,32 @@
-window.addEventListener("DOMContentLoaded", function() {
-    var slideIndex = 0;
-    var slides = document.querySelectorAll("#artcaffe-slideshow img");
-    
-    function nextSlide() {
-        slides[slideIndex].style.transform = "translateX(-100%)";            
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].style.transform = "translateX(0)";
-    }
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    setInterval(nextSlide, 4000);
-    });
-    //Second slideshow on the page
-    window.addEventListener("DOMContentLoaded", function() {
-    var slideIndex1 = 0;
-    var slides1 = document.querySelectorAll("#artcaffe-slideshow-1 img");
-    
-    function nextSlide1() {
-        slides1[slideIndex1].style.transform = "translateX(-100%)";            
-        slideIndex1 = (slideIndex1 + 1) % slides1.length;
-        slides1[slideIndex1].style.transform = "translateX(0)";
-    }
+if (isSafari) {
+	var videos = document.getElementsByClassName("video");
+	for (var i = 0; i < videos.length; i++) {
+		videos[i].style.display = "none";
+	}
+} else {
+	var imgs = document.getElementsByClassName("img");
+	for (var j = 0; j < imgs.length; j++) {
+		imgs[j].style.display = "none";
+	}
+}
 
-    setInterval(nextSlide1, 4000);
-    });
+
+window.addEventListener("DOMContentLoaded", function () {
+	var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	var slideshows = document.querySelectorAll("#artcaffe-market-slideshow");
+
+	slideshows.forEach(function (slideshow) {
+		var slideIndex = 0;
+		var slides = isSafari ? slideshow.querySelectorAll(".img") : slideshow.querySelectorAll(".video");
+
+		function nextSlide() {
+			slides[slideIndex].classList.remove("active");
+			slideIndex = (slideIndex + 1) % slides.length;
+			slides[slideIndex].classList.add("active");
+		}
+
+		setInterval(nextSlide, 9000);
+	});
+});
