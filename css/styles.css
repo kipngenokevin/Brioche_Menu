@@ -39,6 +39,9 @@ p.italicised {
     display: flex;
     justify-content: center;
 }
+.mobile-only {
+	display: none;
+}
 
 .artcaffe-market-slideshow {
 	width: 100%;
@@ -68,12 +71,16 @@ p.italicised {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .artcaffe-market-slideshow {
 		height: 120px;
 	}
 	td {
 		padding: 5px;
+	}
+
+	.mobile-only {
+		display: block;
 	}
 } 
  
